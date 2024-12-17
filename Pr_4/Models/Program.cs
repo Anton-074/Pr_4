@@ -1,4 +1,4 @@
-namespace Pr_4
+namespace Pr_4.Models
 {
     internal static class Program
     {
