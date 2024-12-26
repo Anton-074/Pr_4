@@ -52,7 +52,6 @@
             panelTop.Padding = new Padding(10);
             panelTop.Size = new Size(800, 77);
             panelTop.TabIndex = 0;
-            //panelTop.Paint += this.panelTop_Paint;
             // 
             // buttonDelete
             // 
@@ -114,7 +113,10 @@
             dataGridViewType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewType.Dock = DockStyle.Fill;
             dataGridViewType.Location = new Point(10, 10);
+            dataGridViewType.MultiSelect = false;
             dataGridViewType.Name = "dataGridViewType";
+            dataGridViewType.ReadOnly = true;
+            dataGridViewType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewType.Size = new Size(780, 353);
             dataGridViewType.TabIndex = 0;
             // 
@@ -126,6 +128,7 @@
             Controls.Add(panelFill);
             Controls.Add(panelTop);
             Name = "FormTypesPartner";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Типы партнера";
             Load += Form1_Load;
             panelTop.ResumeLayout(false);

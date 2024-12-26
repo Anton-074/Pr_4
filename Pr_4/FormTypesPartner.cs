@@ -69,7 +69,8 @@ namespace Pr_4
             this.dataGridViewType.DataSource = this.db.TypePartners.Local
                 .OrderBy(o => o.TypeOfPartner).ToList();
 
-            //dataGridViewType.Columns["Id"].Visible = false;
+            dataGridViewType.Columns["Id"].Visible = false;
+            dataGridViewType.Columns["Partners"].Visible = false;
             dataGridViewType.Columns["TypeOfPartner"].HeaderText = "Тип партнера";
         }
         protected override void OnClosing(CancelEventArgs e)

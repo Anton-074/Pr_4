@@ -114,7 +114,10 @@
             dataGridViewType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewType.Dock = DockStyle.Fill;
             dataGridViewType.Location = new Point(10, 10);
+            dataGridViewType.MultiSelect = false;
             dataGridViewType.Name = "dataGridViewType";
+            dataGridViewType.ReadOnly = true;
+            dataGridViewType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewType.Size = new Size(780, 353);
             dataGridViewType.TabIndex = 1;
             // 
@@ -126,6 +129,7 @@
             Controls.Add(panelFill);
             Controls.Add(panelTop);
             Name = "FormTypesProduct";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Типы продукции";
             panelTop.ResumeLayout(false);
             panelFill.ResumeLayout(false);

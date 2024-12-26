@@ -27,8 +27,9 @@ namespace Pr_4
             this.dataGridViewType.DataSource = this.db.TypeOfProducts.Local
                 .OrderBy(o => o.TypeOfProduct1).ToList();
 
-            //dataGridViewType.Columns["Id"].Visible = false;
-            dataGridViewType.Columns["TypeOfProduct"].HeaderText = "Тип продукта";
+            dataGridViewType.Columns["Id"].Visible = false;
+            dataGridViewType.Columns["Products"].Visible = false;
+            dataGridViewType.Columns["TypeOfProduct1"].HeaderText = "Тип продукта";
         }
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -66,8 +67,8 @@ namespace Pr_4
                 return;
 
             int index = dataGridViewType.SelectedRows[0].Index;
-            short id = 0;
-            bool converted = Int16.TryParse(dataGridViewType[0, index].Value.ToString(), out id);
+            int id = 0;
+            bool converted = Int32.TryParse(dataGridViewType[0, index].Value.ToString(), out id);
             if (!converted)
                 return;
 
@@ -105,8 +106,8 @@ namespace Pr_4
                 return;
 
             int index = dataGridViewType.SelectedRows[0].Index;
-            short id = 0;
-            bool converted = Int16.TryParse(dataGridViewType[0, index].Value.ToString(), out id);
+            int id = 0;
+            bool converted = Int32.TryParse(dataGridViewType[0, index].Value.ToString(), out id);
             if (!converted)
                 return;
 
