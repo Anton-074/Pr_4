@@ -28,5 +28,11 @@ namespace Pr_4
             FormTypesProduct form = new();
             form.ShowDialog();
         }
+
+        private void buttonPartners_Click(object sender, EventArgs e)
+        {
+            FormPartners form = new();
+            form.ShowDialog();
+        }
     }
 }
